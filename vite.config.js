@@ -4,8 +4,8 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/goit-react-test/",
   build: {
-    base: "/goit-react-test/",
     sourcemap: true,
   },
 });
