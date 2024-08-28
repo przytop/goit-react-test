@@ -4,6 +4,16 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Product } from "./Product";
 import { Mailbox } from "./Mailbox";
+import { BookList } from "./BookList";
+import { Alert } from "./Alert";
+import { DiChrome } from "react-icons/di";
+import { UserMenu } from "./UserMenu";
+
+const favouriteBooks = [
+  { id: "id-1", name: "JS for beginners" },
+  { id: "id-2", name: "React basics" },
+  { id: "id-3", name: "React Router overview" },
+];
 
 export function App() {
   const [count, setCount] = useState(0);
@@ -48,6 +58,28 @@ export function App() {
       <div>
         <h1>Mailbox</h1>
         <Mailbox />
+      </div>
+      <div>
+        <h1>Collection of Books</h1>
+        <BookList books={favouriteBooks} />
+      </div>
+      <div>
+        <h1>Alerts</h1>
+        <Alert variant="info">
+          Would you like to browse our recommended products?
+        </Alert>
+        <Alert variant="error" outlined>
+          There was an error during your last transaction
+        </Alert>
+        <Alert variant="success" elevated>
+          Payment received, thank you for your purchase
+        </Alert>
+        <Alert variant="warning" outlined elevated>
+          Please update your profile contact information
+        </Alert>
+      </div>
+      <div>
+        <UserMenu />
       </div>
     </>
   );
