@@ -2,7 +2,12 @@ import css from "./Alert.module.css";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-export const Alert = ({ children, variant, outlined, elevated }) => {
+export const Alert = ({
+  children,
+  variant,
+  outlined = false,
+  elevated = false,
+}) => {
   return (
     <p
       className={clsx(css[variant], {
@@ -17,12 +22,7 @@ export const Alert = ({ children, variant, outlined, elevated }) => {
 
 Alert.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(["info", "success", "warning", "error"]),
+  variant: PropTypes.oneOf(["info", "success", "warning", "error"]).isRequired,
   outlined: PropTypes.bool,
   elevated: PropTypes.bool,
-};
-
-Alert.defaultProps = {
-  outlined: false,
-  elevated: false,
 };

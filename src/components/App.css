@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+div {
+  margin-bottom: 40px;
+  border: 1px dashed black;
+  padding: 20px;
+}
+
 .logo {
   height: 9em;
   padding: 1.5em;
