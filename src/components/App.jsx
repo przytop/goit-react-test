@@ -22,7 +22,7 @@ import TaskFilter from "./TaskFilter";
 import initialTasks from "./tasks.json";
 import FeedbackForm from "./FeedbackForm";
 import Articles from "./Articles";
-import VideoPlayer from "./VideoPLayer";
+import VideoPlayer from "./VideoPlayer";
 import { UserMenu2 } from "./UserMenu2";
 import Store from "./Store";
 
