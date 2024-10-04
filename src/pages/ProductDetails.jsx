@@ -1,9 +1,12 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { getProductById } from "../shop-api";
+import { BackLink } from "../components/BackLink";
 
 export default function ProductDetails() {
   const { productId } = useParams();
   const product = getProductById(productId);
+  const location = useLocation();
+  const backLinkHref = location.state ?? "/products";
 
   return (
     <div>
@@ -21,6 +24,7 @@ export default function ProductDetails() {
           praesentium ipsum quos unde voluptatum?
         </p>
       </div>
+      <BackLink to={backLinkHref}>Back to products</BackLink>
     </div>
   );
 }
