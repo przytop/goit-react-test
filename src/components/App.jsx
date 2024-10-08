@@ -25,6 +25,9 @@ import Articles from "./Articles";
 import VideoPlayer from "./VideoPlayer";
 import { UserMenu2 } from "./UserMenu2";
 import Store from "./Store";
+import { Provider } from "react-redux";
+import { store } from "../redux/store";
+import TasksRedux from "./TasksRedux";
 
 const favouriteBooks = [
   { id: "id-1", name: "JS for beginners" },
@@ -237,6 +240,11 @@ export function App() {
       <VideoPlayer source="https://media.w3.org/2010/05/sintel/trailer.mp4" />
       <UserMenu2 />
       <Store />
+      <div>
+        <Provider store={store}>
+          <TasksRedux />
+        </Provider>
+      </div>
     </>
   );
 }
